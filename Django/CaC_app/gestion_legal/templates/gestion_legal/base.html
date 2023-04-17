@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block titulo%} {%endblock%}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'gestion_legal/imagenes/favicon.ico' %}">
+</head>
+<body>
+    <header>
+        {%block header%} {%endblock%}
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="{%url 'index'%}">Inicio</a></li>
+            <li> <a href="{%url 'alta_usuario'%}">Crear cuenta</a></li>
+            <li> <a href="{%url 'alta_cliente'%}">Cargar cliente</a></li>
+            <li> <a href="{%url 'baja_cliente'%}">Modificar cliente</a></li>
+            <li> <a href="{%url 'login'%}">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        {%block main%} {%endblock%}
+    </main>
+    <footer>Timer legal 2023</footer>
+
+</body>
+</html>

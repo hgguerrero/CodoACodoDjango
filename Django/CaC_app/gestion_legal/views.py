@@ -4,19 +4,23 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Bienvenido al sistema de gestion legal")
+    context = []
+    return render(request, "gestion_legal/index.html" )
 
 def alta_cliente(request):
-    return HttpResponse("Alta de clientes")
+    return render(request, "gestion_legal/alta_cliente.html")
 
 def baja_cliente(request):
-    return HttpResponse("Baja de clientes")
+    return render(request, "gestion_legal/baja_cliente.html")
 
 def login(request):
-    return HttpResponse("Pagina de login")
+    return render(request, "gestion_legal/login.html")
 
 def alta_usuario(request):
-    return HttpResponse("Alta de usuarios")
+    return render(request, "gestion_legal/alta_usuario.html")
 
 def baja_usuario(request):
-    return HttpResponse("Baja de usuarios")
+    return render(request, "gestion_legal/baja_usuario.html")
+
+def servicios(request):
+    return render(request, "gestion_legal/servicios.html")
