@@ -5,17 +5,11 @@
 {%block header%}Pagina de alta de clientes {%endblock%}
 
 
-{%block main%} 
-    <form action="">
-        <label for="">nombre y apellido: </label> <input type="text" name="" id=""><br>
+{%block main%}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form}}
 
-        <label for="">Dni: </label> <input type="text" name="" id=""> <br>
-
-        <label for="">Expediente: </label> <input type="text" name="" id=""><br>
-
-        <label for="">Email: </label> <input type="text" name="" id=""><br>
-
-        <label for="">Fecha de ingreso: </label> <input type="text" name="" id=""><br>
-    </form>
+    <input type="submit">
+</form>
 {%endblock%}
-
